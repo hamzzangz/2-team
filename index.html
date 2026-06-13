@@ -1,1 +1,256 @@
 
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Oora - Settings</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Manrope:wght@600&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@100..900&family=Plus+Jakarta+Sans:wght@100..900&display=swap" rel="stylesheet"/>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    
+    body {
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    .ambient-glow {
+      box-shadow: 0 10px 40px -10px rgba(91, 88, 148, 0.08);
+    }
+
+    .list-item-hover:hover {
+      background-color: rgba(244, 243, 248, 0.8);
+      transform: translateX(4px);
+    }
+
+    .settings-container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+  </style>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "on-tertiary-container": "#868789",
+            "surface-tint": "#635d5e",
+            "on-surface": "#1a1b1f",
+            "tertiary-fixed": "#e2e2e4",
+            "on-secondary": "#ffffff",
+            "secondary-fixed-dim": "#c4c0ff",
+            "surface-bright": "#faf9fe",
+            "outline": "#7e7577",
+            "surface": "#faf9fe",
+            "surface-container-low": "#f4f3f8",
+            "background": "#faf9fe",
+            "on-secondary-container": "#4b4883",
+            "primary-fixed-dim": "#cdc4c5",
+            "on-secondary-fixed-variant": "#43407b",
+            "on-primary-fixed-variant": "#4b4546",
+            "on-primary-fixed": "#1e1b1c",
+            "inverse-surface": "#2f3034",
+            "outline-variant": "#cfc4c6",
+            "on-primary-container": "#8d8687",
+            "on-tertiary": "#ffffff",
+            "secondary-container": "#bebafe",
+            "surface-container-lowest": "#ffffff",
+            "on-error-container": "#93000a",
+            "on-surface-variant": "#4c4547",
+            "tertiary": "#060809",
+            "on-tertiary-fixed-variant": "#454749",
+            "surface-dim": "#dad9df",
+            "on-error": "#ffffff",
+            "on-tertiary-fixed": "#1a1c1d",
+            "error": "#ba1a1a",
+            "secondary-fixed": "#e3dfff",
+            "error-container": "#ffdad6",
+            "tertiary-container": "#1e2022",
+            "surface-container-high": "#e9e7ed",
+            "primary": "#0a0708",
+            "on-background": "#1a1b1f",
+            "surface-container": "#eeedf3",
+            "tertiary-fixed-dim": "#c6c6c8",
+            "surface-variant": "#e3e2e7",
+            "inverse-primary": "#cdc4c5",
+            "primary-fixed": "#e9e0e1",
+            "primary-container": "#231f20",
+            "inverse-on-surface": "#f1f0f5",
+            "secondary": "#5b5894",
+            "on-secondary-fixed": "#16124d",
+            "on-primary": "#ffffff",
+            "surface-container-highest": "#e3e2e7"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "container-margin-desktop": "40px",
+            "section-gap": "48px",
+            "gutter": "16px",
+            "container-margin-mobile": "20px",
+            "unit": "8px"
+          },
+          "fontFamily": {
+            "headline-md": ["Plus Jakarta Sans"],
+            "headline-lg-mobile": ["Plus Jakarta Sans"],
+            "headline-lg": ["Plus Jakarta Sans"],
+            "label-sm": ["Manrope"],
+            "body-lg": ["Plus Jakarta Sans"],
+            "body-md": ["Plus Jakarta Sans"]
+          },
+          "fontSize": {
+            "headline-md": ["24px", {"lineHeight": "30px", "fontWeight": "600"}],
+            "headline-lg-mobile": ["26px", {"lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+            "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+            "label-sm": ["13px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+            "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+            "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface font-body-md min-h-screen pb-32">
+<!-- Top App Bar -->
+<header class="bg-background dark:bg-background flex justify-between items-center w-full px-container-margin-mobile md:px-container-margin-desktop py-4 sticky top-0 z-50">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-2xl" data-icon="bubble_chart">bubble_chart</span>
+<h1 class="text-headline-md font-headline-md font-bold text-primary dark:text-on-primary-fixed">Oora</h1>
+</div>
+<div class="w-10 h-10 rounded-full overflow-hidden bg-surface-container-high">
+<img alt="User profile photo" class="w-full h-full object-cover" data-alt="A professional studio portrait of a friendly-looking middle-aged man with kind eyes and a warm smile, set against a soft, neutral-toned minimalist background. The lighting is bright and soft-key, reflecting a high-end light mode user interface aesthetic. The image is clean and minimalist, conveying trust and reliability for a care-focused technology platform." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBV528HqdPYuBjQfJBnsb7bWDlOrhjAuQoD49DGjQVDvx6AIiq66-ZnfnfqttcK08O3dfrBZdAq7cuXKv8lJetc-tU12hStQXZ1mTGRHMU7NJMOzwK5NBnhAp1IrK2ftrlLFcgLtLYa_3Irn922NUQ84JRe5Go2xiRY4OpCpGqqHI3iWqXIPvMFxuMAaISqNxs3cPqVtGDufswAVQq5mtGgAwk2F6NYOYG80xhgVX48ibW6B6p2qTSjdbYkP_ryc0XsJFwIi5dwbCrz"/>
+</div>
+</header>
+<main class="px-container-margin-mobile md:px-container-margin-desktop py-8 settings-container">
+<!-- Profile Section -->
+<section class="mb-12 flex flex-col items-center text-center">
+<div class="relative mb-4">
+<div class="w-24 h-24 rounded-full p-1 bg-gradient-to-tr from-secondary/20 to-secondary overflow-hidden ambient-glow">
+<img alt="User profile photo" class="w-full h-full rounded-full object-cover border-2 border-white" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCc6gu1Tf01oSr17boVFPj9_n_fwnEBzWQcsU0TYxVmj0iR10SKNpHouYBb6wHbiLpBYT4qgwWIlUzFBTjRFTDg94Tmz4Hoz-h1QaAZHtD0C5ibmFfdLc7ec3yJodqMvFFRewYpTklaCsTa8kueTHvHQGzEgoWFAsjV3a_hV-AFzCCQi_fehQLlGAT4zatYBVtu9bWdCCoeNJShkpahhjwZHQsGSd2OfjdpfSaSeQhlq3APxTVvuN1FgySiWzx1uKUe82Z8_gzL9Bw4"/>
+</div>
+<button class="absolute bottom-0 right-0 bg-primary text-white p-2 rounded-full shadow-lg hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[18px]" data-icon="edit">edit</span>
+</button>
+</div>
+<h2 class="text-headline-lg-mobile md:text-headline-lg font-headline-lg text-primary mb-1">Alex Harrison</h2>
+<p class="text-on-tertiary-container font-body-md">Primary Caregiver • Harrison Family</p>
+</section>
+<!-- Settings Groups -->
+<div class="space-y-4">
+<!-- List Container -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden ambient-glow p-2">
+<!-- Manage Devices -->
+<a class="list-item-hover group flex items-center justify-between p-4 rounded-lg transition-all duration-300" href="#">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-surface-container-low flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined" data-icon="sensors">sensors</span>
+</div>
+<span class="text-body-lg font-semibold text-primary">Manage Devices</span>
+</div>
+<span class="material-symbols-outlined text-outline-variant group-hover:text-primary transition-colors" data-icon="chevron_right">chevron_right</span>
+</a>
+<!-- Notification Preferences -->
+<a class="list-item-hover group flex items-center justify-between p-4 rounded-lg transition-all duration-300" href="#">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-surface-container-low flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</div>
+<span class="text-body-lg font-semibold text-primary">Notification Preferences</span>
+</div>
+<span class="material-symbols-outlined text-outline-variant group-hover:text-primary transition-colors" data-icon="chevron_right">chevron_right</span>
+</a>
+<!-- Family Sharing -->
+<a class="list-item-hover group flex items-center justify-between p-4 rounded-lg transition-all duration-300" href="#">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-surface-container-low flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined" data-icon="group">group</span>
+</div>
+<span class="text-body-lg font-semibold text-primary">Family Sharing</span>
+</div>
+<span class="material-symbols-outlined text-outline-variant group-hover:text-primary transition-colors" data-icon="chevron_right">chevron_right</span>
+</a>
+<!-- Privacy & Security -->
+<a class="list-item-hover group flex items-center justify-between p-4 rounded-lg transition-all duration-300" href="#">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-surface-container-low flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined" data-icon="verified_user">verified_user</span>
+</div>
+<span class="text-body-lg font-semibold text-primary">Privacy & Security</span>
+</div>
+<span class="material-symbols-outlined text-outline-variant group-hover:text-primary transition-colors" data-icon="chevron_right">chevron_right</span>
+</a>
+<!-- Support -->
+<a class="list-item-hover group flex items-center justify-between p-4 rounded-lg transition-all duration-300" href="#">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-surface-container-low flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined" data-icon="help">help</span>
+</div>
+<span class="text-body-lg font-semibold text-primary">Support</span>
+</div>
+<span class="material-symbols-outlined text-outline-variant group-hover:text-primary transition-colors" data-icon="chevron_right">chevron_right</span>
+</a>
+</div>
+<!-- Logout Action -->
+<div class="mt-12">
+<button class="w-full py-4 px-6 rounded-xl text-error bg-error-container/20 font-bold flex items-center justify-center gap-2 hover:bg-error-container/40 transition-colors active:scale-95 duration-200">
+<span class="material-symbols-outlined" data-icon="logout">logout</span>
+          Log out
+        </button>
+</div>
+<!-- App Version Info -->
+<div class="text-center pt-8 pb-12">
+<p class="text-label-sm font-label-sm text-on-tertiary-container uppercase tracking-widest">Oora App v2.4.0</p>
+</div>
+</div>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-3 bg-surface-bright dark:bg-surface-container-lowest rounded-t-xl shadow-[0_-10px_40px_rgba(91,88,148,0.08)]">
+<!-- Home -->
+<button class="flex flex-col items-center justify-center text-on-tertiary-container dark:text-outline-variant hover:text-primary transition-colors group">
+<span class="material-symbols-outlined mb-1 group-active:scale-95 transition-transform" data-icon="grid_view">grid_view</span>
+<span class="text-label-sm font-label-sm">Home</span>
+</button>
+<!-- Devices -->
+<button class="flex flex-col items-center justify-center text-on-tertiary-container dark:text-outline-variant hover:text-primary transition-colors group">
+<span class="material-symbols-outlined mb-1 group-active:scale-95 transition-transform" data-icon="sensors">sensors</span>
+<span class="text-label-sm font-label-sm">Devices</span>
+</button>
+<!-- Insights -->
+<button class="flex flex-col items-center justify-center text-on-tertiary-container dark:text-outline-variant hover:text-primary transition-colors group">
+<span class="material-symbols-outlined mb-1 group-active:scale-95 transition-transform" data-icon="analytics">analytics</span>
+<span class="text-label-sm font-label-sm">Insights</span>
+</button>
+<!-- Settings (ACTIVE) -->
+<button class="flex flex-col items-center justify-center text-secondary dark:text-secondary-fixed-dim font-bold bg-secondary-container/20 rounded-xl px-4 py-1 scale-95 transition-all">
+<span class="material-symbols-outlined mb-1" data-icon="settings" style="font-variation-settings: 'FILL' 1;">settings</span>
+<span class="text-label-sm font-label-sm">Settings</span>
+</button>
+</nav>
+<script>
+    // Micro-interactions for list items
+    document.querySelectorAll('.list-item-hover').forEach(item => {
+      item.addEventListener('touchstart', () => {
+        item.style.backgroundColor = 'rgba(244, 243, 248, 1)';
+      });
+      item.addEventListener('touchend', () => {
+        item.style.backgroundColor = '';
+      });
+    });
+  </script>
+</body></html>
